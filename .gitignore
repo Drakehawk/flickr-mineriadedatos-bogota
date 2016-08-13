@@ -1,3 +1,14 @@
+# CUSTOM GITIGNORE
+
+# API keys
+keys.py
+
+# Emacs tempo files
+*#
+*~
+
+# DEFAULT PYTHON GITIGNORE
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
