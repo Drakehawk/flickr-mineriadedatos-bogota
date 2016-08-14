@@ -1,4 +1,5 @@
 from flickrapi import FlickrAPI
+import sys
 import time
 import keys
 
@@ -21,12 +22,16 @@ NB_PAGES = 500
 
 ##############################################################################
 
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+    
 flickr = FlickrAPI(keys.API_KEY, keys.API_SECRET, format='parsed-json')
 
 results = []
 
 for curpage in range(NB_PAGES):
-    #print(curpage)
+    eprint(curpage)
     page = flickr.photos.search(extras=EXTRAS,
                                  place_id=BOGOTA_FLICKR_ID,
                                  accuracy=ACCURACY,

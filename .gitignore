@@ -3,6 +3,9 @@
 # API keys
 keys.py
 
+# JSON file (dataset)
+*.json
+
 # Emacs tempo files
 *#
 *~
