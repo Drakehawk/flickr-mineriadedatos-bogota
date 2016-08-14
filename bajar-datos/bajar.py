@@ -26,7 +26,7 @@ flickr = FlickrAPI(keys.API_KEY, keys.API_SECRET, format='parsed-json')
 results = []
 
 for curpage in range(NB_PAGES):
-    print(curpage)
+    #print(curpage)
     page = flickr.photos.search(extras=EXTRAS,
                                  place_id=BOGOTA_FLICKR_ID,
                                  accuracy=ACCURACY,
