@@ -19,7 +19,7 @@ PER_PAGE = 250 # Number of results per page (max 250)
 
 EXTRAS = 'description,date_taken,owner_name,geo,tags,media,path_alias,url_s'
 
-NB_PAGES = 3
+NB_PAGES = 500
 
 ##############################################################################
 
@@ -46,8 +46,6 @@ for curpage in range(1, NB_PAGES+1):
 results_merged = []
 for res in results:
     results_merged.append(json.loads(res))
-
-#print(results_merged)
 
 output = json.dumps(results_merged)
 
